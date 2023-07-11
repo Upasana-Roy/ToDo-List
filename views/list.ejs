@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div class="box" id="heading">
+      <h1> <%= kindOfDay %> </h1>
+    </div>
+
+    <div class="box">
+        <% for(var i=0; i<newListItems.length; i++){ %>
+          <div class="item">
+            <input type="checkbox" name="" value="">
+            <p> <%= newListItems[i] %> </p>
+          </div>
+        <% } %>
+
+      <form class="item" action="/" method="post">
+        <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+        <button type="submit" name="button">+</button>
+      </form>
+    </div>
+
+  </body>
+</html>
+
+<!-- without CSS -->
+
+<!-- <!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body> -->
+    <!-- <p>Less Go and Do something.</p>
+    <h1>It's a <%= kindOfDay %> !</h1> -->
+
+    <!-- html is for content so svoid using too many logic only essential ones -->
+    <!-- <% if(kindOfDay === "Saturday" || kindOfDay === "Sunday"){ %>
+      <h1 style="color: purple"> <%= kindOfDay %> ToDo List</h1>
+    <% }else{ %>
+      <h1 style="color: orange"> <%= kindOfDay %> ToDo List</h1>
+    <% } %> -->
+
+    <!-- Creating th toDo List -->
+    <!-- <h1> <%= kindOfDay %> </h1> -->
+    <!-- <ul>
+      <li>Start with optimism</li>
+      <li>Enjoy the day</li>
+      <li>Set Goals</li>
+      <li>Work towards your Career</li>
+      <li>Be happy</li>
+      <li> newListItem  </li>  with the markers if more than one added it replaces the prev one
+    </ul> -->
+
+    <!-- <ul>
+      <% for(var i=0; i<newListItems.length; i++){ %>
+
+        <li> <%= newListItems[i] %> </li>
+      <% } %>
+    </ul> -->
+    <!-- Now we have to add new things to it i.e, send data from the webpage to the server i.e, by post request -->
+    <!-- make a form with a single i/p & on clicking the submit button it will post it to the home route -->
+    <!-- <form class="" action="/" method="post">
+      <input type="text" name="newItem">
+      <button type="submit" name="button">Add</button>
+    </form> -->
+
+
+
+  <!-- </body>
+</html> -->
